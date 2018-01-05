@@ -28,3 +28,7 @@ end
 def full?(board)
   board.all? {|position| !(position.nil? || position == " ")}
 end
+
+def draw?(board)
+  (won?(board) == false && full?(board) == true)? true : false
+end
