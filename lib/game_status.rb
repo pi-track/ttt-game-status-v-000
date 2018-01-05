@@ -21,5 +21,8 @@ def won?(board)
     positions = board[combo[0],combo[1],combo[2]]
     winning_position = positions.all? {|position| position == "X"}
     winning_position = positions.all? {|position| position == "O"}
+    if winning_position == true
+      return "combo"
+    end
   end
 end
