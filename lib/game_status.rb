@@ -26,7 +26,6 @@ def won?(board)
 end
 
 def full?(board)
-  board.each do |index|
-    position_taken?(board, index)
+  board.any? {|position| position.nil? || position == " "}
   end
 end
