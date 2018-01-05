@@ -24,7 +24,7 @@ def won?(board)
     elsif positions[0] == "O" && positions[1] == "O" && positions[2] == "O"
       return combo
     else
-      false
+      return winning_position
     end
   end
 #    winning_position = positions.all? {|position| position == "X"}
