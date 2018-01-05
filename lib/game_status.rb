@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
-    positions = board[combo[0]],board[combo[1]],board[combo[2]]
+    positions = [board[combo[0]],board[combo[1]],board[combo[2]]]
       if (positions[] == "X" && positions[1] == "X" && positions[2] == "X") || (positions[0] == "O" && positions[1] == "O" && positions[2] == "O")
         return combo
       end
