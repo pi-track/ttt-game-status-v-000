@@ -36,3 +36,7 @@ end
 def over?(board)
   (won?(board) != false || draw?(board) == true)? true : false
 end
+
+def winner(board)
+  won?(board) == true ? board[won?(board)[0]] : nil
+  combo = won?()
