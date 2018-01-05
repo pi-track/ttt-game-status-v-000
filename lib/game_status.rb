@@ -19,11 +19,19 @@ def won?(board)
   winning_position = false
   WIN_COMBINATIONS.each do |combo|
     positions = board[combo[0],combo[1],combo[2]]
-    winning_position = positions.all? {|position| position == "X"}
-    winning_position = positions.all? {|position| position == "O"}
-    if winning_position == true
-      return "combo"
+    if positions[0] == "X" && positions[1] == "X" && positions[2] == "X"
+      return combo
+    elsif positions[0] == "O" && positions[1] == "O" && positions[2] == "O"
+      return combo
+    else
+      false
     end
   end
-  return false
+#    winning_position = positions.all? {|position| position == "X"}
+#    winning_position = positions.all? {|position| position == "O"}
+#    if winning_position == true
+#      return "combo"
+#    end
+#  end
+#  return false
 end
