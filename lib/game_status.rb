@@ -27,5 +27,4 @@ end
 
 def full?(board)
   board.any? {|position| !(position.nil? || position == " ")}
-  end
 end
