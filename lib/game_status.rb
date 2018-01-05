@@ -39,4 +39,4 @@ end
 
 def winner(board)
   won?(board) == true ? board[won?(board)[0]] : nil
-  combo = won?()
+end
